@@ -1,0 +1,16 @@
+[
+  {
+    "source_id": "demo-01",
+    "path": "content/slides.tex",
+    "sha256": "234e8a8d15a2ea1aa9025f34f99db8afb0315a5b528ffa860fb14c1339f9ef25",
+    "location": "entire file",
+    "notes": "人为构造/合成的模板演示资料，非真实论文或实验。"
+  },
+  {
+    "source_id": "demo-02",
+    "path": "data/demo-ablation.csv",
+    "sha256": "24d64cf499b9f0050436ec35faa31dbf207d3b62e00b7115eeed6056e2b1255c",
+    "location": "entire file",
+    "notes": "人为构造/合成的模板演示资料，非真实论文或实验。"
+  }
+]

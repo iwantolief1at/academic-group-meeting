@@ -1,0 +1,65 @@
+\ReportTitlePage
+\ReportOutline{
+  \begin{itemize}\item 本周问题与实验假设\item Baseline 与对照条件\end{itemize}
+}{
+  \begin{itemize}\item 主结果、曲线与 Bad Case\item 阶段结论与下一步决策\end{itemize}
+}
+\ReportContent{任务概览：让实验回答明确的问题}{所有状态与数值均为演示，不代表本周真实工作。}{
+  \begin{GMBlock}{上次任务与本次问题}
+    示例任务：分析 Baseline 对小目标的漏检，并比较细节增强与上下文分支。
+  \end{GMBlock}
+  \begin{GMConclusion}{假设与验证路径}
+    假设细节增强有助于召回；固定训练预算与评估条件，分别开关模块并分析误检。
+  \end{GMConclusion}
+}
+\ReportCompare{Baseline 与改动：先明确对照关系}{表格中的性能只有在共同评估口径下才能比较。}{
+  \begin{GMBlock}{固定条件（真实报告必填）}
+    \begin{itemize}\item 数据划分与输入大小\item 训练预算与种子\item 阈值、后处理和评估脚本\end{itemize}
+  \end{GMBlock}
+}{
+  \begin{GMBlock}{示例改动}
+    \begin{itemize}\item Detail：仅开启细节分支\item Context：仅开启上下文分支\item 各行同一组示意指标\end{itemize}
+  \end{GMBlock}
+}{真实 run 和配置尚未提供；此处展示实验设计方式，不声称完成过训练。}
+\ReportContent{实验环境：显式保留缺失资料}{实际参数必须来自配置、运行日志或实验记录。}{
+  \begin{tabularx}{\textwidth}{lX}\toprule
+    项目 & 本例记录\\\midrule
+    数据与划分 & 合成演示；无真实数据集\\
+    代码版本 / run ID & 无真实记录\\
+    GPU / batch / 学习率 & 未提供，不猜测\\
+    指标与小目标定义 & 示意 AP50、AP\_small；真实定义待核对\\\bottomrule
+  \end{tabularx}
+  \begin{GMCaution}{报告边界}
+    复现参数、训练成功与评估条件均未验证；请替换为真实证据后用于研究结论。
+  \end{GMCaution}
+}
+\ReportResults{核心结果：下降同样需要展示}{合成演示数据；单位为百分数；没有重复实验。}{
+  \input{data/results-table.tex}
+}{演示中 Detail 的 AP\_small 比 Baseline 高 3.4 个百分点；Context 低 0.7 个百分点。}{来源：data/demo-results.csv；数字为人为构造，不能解释为因果证据。}
+\ReportFigure{训练过程：曲线用于定位观察}{合成曲线，50 epoch 仅为示意横坐标，没有执行真实训练。}{figures/curve.png}{
+  本页结论：示例末点与结果表一致；单条曲线不足以说明稳定性。
+}{来源：data/demo-curve.csv，经 make\_demo\_assets.py 绘制。}
+\ReportDetection{检测对比：新增检出，也出现误检}{同一合成图和裁剪；绿框为 GT，蓝框为检出，橙框标记示意误检。}{figures/gt.png}{figures/baseline.png}{figures/improved.png}{
+  演示图中新增一个检出，仍漏检一个目标并出现一处误检；图像非真实遥感数据。
+}
+\ReportFigure{Bad Case：背景纹理为何被激活？}{同一合成场景的局部放大，橙框是示意误检。}{figures/bad-case.png}{
+  本页结论：误检位置没有合成目标；“背景增强”只是可能原因，需响应图和受控实验验证。
+}{来源：figures/improved.png 的固定裁剪区域；模板合成场景。}
+\ReportSummary{阶段结论：观察、推断与缺口分开写}{
+  \begin{GMBlock}{演示观察}
+    Detail 指标更高，Context 指标下降；示意检测图同时包含漏检与误检。
+  \end{GMBlock}
+  \begin{GMCaution}{不能据此确认的内容}
+    无真实 run、重复实验和样本统计；机制、稳定性与跨场景表现均未验证。
+  \end{GMCaution}
+}{用真实数据和固定条件重复实验后，才能形成阶段性科研结论。}
+\ReportPlan{下一步计划：每项都有验证目标}{
+  {\fontsize{9}{12}\selectfont
+  \begin{tabularx}{\textwidth}{lXl}\toprule
+    任务 & 验证目标/成功标准 & 状态\\\midrule
+    核对配置 & 划分、评估和预算一致 & 计划\\
+    重复训练 & 报告种子间差异，不选最好一次 & 计划\\
+    误检分析 & 固定阈值，统计典型背景类型 & 计划\\\bottomrule
+  \end{tabularx}}
+}{先排查误检还是扩大多种子对照？请根据真实证据和算力预算决策。}
+\ReportEnd{遥感小目标检测 · 实验进展讨论}{示例日期：2026 年 10 月 12 日}{下一次汇报：带来源的真实结果、配置与代表性 Bad Case。}

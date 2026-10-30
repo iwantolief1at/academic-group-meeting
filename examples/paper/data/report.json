@@ -1,0 +1,160 @@
+{
+  "schema_version": 1,
+  "mode": "paper",
+  "status": "demo",
+  "date": "2026-10-12 (example date)",
+  "title": "遥感小目标检测模板示例",
+  "focus": [
+    "组件功能验证",
+    "证据边界与逻辑演示"
+  ],
+  "missing_information": [
+    "本例无真实论文/实验，不能作为科研证据"
+  ],
+  "slides": [
+    {
+      "slide_id": "paper-title",
+      "page": 1,
+      "claim": "标题页",
+      "layout": "title",
+      "evidence_kind": "demo",
+      "source_ids": [
+        "demo-01",
+        "demo-02"
+      ],
+      "status": "demo"
+    },
+    {
+      "slide_id": "paper-outline",
+      "page": 2,
+      "claim": "阅读主线",
+      "layout": "outline",
+      "evidence_kind": "demo",
+      "source_ids": [
+        "demo-01",
+        "demo-02"
+      ],
+      "status": "demo"
+    },
+    {
+      "slide_id": "paper-identity",
+      "page": 3,
+      "claim": "论文身份是虚构演示",
+      "layout": "content",
+      "evidence_kind": "demo",
+      "source_ids": [
+        "demo-01",
+        "demo-02"
+      ],
+      "status": "demo"
+    },
+    {
+      "slide_id": "paper-section",
+      "page": 4,
+      "claim": "从问题到方法",
+      "layout": "section",
+      "evidence_kind": "demo",
+      "source_ids": [
+        "demo-01",
+        "demo-02"
+      ],
+      "status": "demo"
+    },
+    {
+      "slide_id": "paper-problem",
+      "page": 5,
+      "claim": "方法设计须对应可比较实验",
+      "layout": "compare",
+      "evidence_kind": "demo",
+      "source_ids": [
+        "demo-01",
+        "demo-02"
+      ],
+      "status": "demo"
+    },
+    {
+      "slide_id": "paper-network",
+      "page": 6,
+      "claim": "示意网络应解释完整数据流",
+      "layout": "network",
+      "evidence_kind": "demo",
+      "source_ids": [
+        "demo-01",
+        "demo-02"
+      ],
+      "status": "demo"
+    },
+    {
+      "slide_id": "paper-formula",
+      "page": 7,
+      "claim": "公式机制不能替代实验有效性",
+      "layout": "equation",
+      "evidence_kind": "demo",
+      "source_ids": [
+        "demo-01",
+        "demo-02"
+      ],
+      "status": "demo"
+    },
+    {
+      "slide_id": "paper-settings",
+      "page": 8,
+      "claim": "真实数据与训练设置未提供",
+      "layout": "content",
+      "evidence_kind": "demo",
+      "source_ids": [
+        "demo-01",
+        "demo-02"
+      ],
+      "status": "demo"
+    },
+    {
+      "slide_id": "paper-results",
+      "page": 9,
+      "claim": "演示AP50增2.9/减0.8个百分点",
+      "layout": "results",
+      "evidence_kind": "demo",
+      "source_ids": [
+        "demo-01",
+        "demo-02"
+      ],
+      "status": "demo"
+    },
+    {
+      "slide_id": "paper-ablation",
+      "page": 10,
+      "claim": "演示消融不证明真实有效性",
+      "layout": "ablation",
+      "evidence_kind": "demo",
+      "source_ids": [
+        "demo-01",
+        "demo-02"
+      ],
+      "status": "demo"
+    },
+    {
+      "slide_id": "paper-summary",
+      "page": 11,
+      "claim": "研究启发需用真实对照验证",
+      "layout": "summary",
+      "evidence_kind": "demo",
+      "source_ids": [
+        "demo-01",
+        "demo-02"
+      ],
+      "status": "demo"
+    },
+    {
+      "slide_id": "paper-end",
+      "page": 12,
+      "claim": "替换真实论文资料后开展阅读汇报",
+      "layout": "end",
+      "evidence_kind": "demo",
+      "source_ids": [
+        "demo-01",
+        "demo-02"
+      ],
+      "status": "demo"
+    }
+  ]
+}

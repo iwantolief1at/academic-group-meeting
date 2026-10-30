@@ -1,0 +1,232 @@
+{
+  "schema_version": 1,
+  "mode": "experiment",
+  "status": "demo",
+  "date": "2026-10-12 (example date)",
+  "title": "遥感小目标检测模板示例",
+  "focus": [
+    "组件功能验证",
+    "证据边界与逻辑演示"
+  ],
+  "missing_information": [
+    "本例无真实论文/实验，不能作为科研证据"
+  ],
+  "slides": [
+    {
+      "slide_id": "experiment-title",
+      "page": 1,
+      "claim": "标题页",
+      "layout": "title",
+      "evidence_kind": "demo",
+      "source_ids": [
+        "demo-01",
+        "demo-02",
+        "demo-03",
+        "demo-04",
+        "demo-05",
+        "demo-06",
+        "demo-07",
+        "demo-08"
+      ],
+      "status": "demo"
+    },
+    {
+      "slide_id": "experiment-outline",
+      "page": 2,
+      "claim": "实验主线",
+      "layout": "outline",
+      "evidence_kind": "demo",
+      "source_ids": [
+        "demo-01",
+        "demo-02",
+        "demo-03",
+        "demo-04",
+        "demo-05",
+        "demo-06",
+        "demo-07",
+        "demo-08"
+      ],
+      "status": "demo"
+    },
+    {
+      "slide_id": "experiment-question",
+      "page": 3,
+      "claim": "先明确实验问题和假设",
+      "layout": "content",
+      "evidence_kind": "demo",
+      "source_ids": [
+        "demo-01",
+        "demo-02",
+        "demo-03",
+        "demo-04",
+        "demo-05",
+        "demo-06",
+        "demo-07",
+        "demo-08"
+      ],
+      "status": "demo"
+    },
+    {
+      "slide_id": "experiment-baseline",
+      "page": 4,
+      "claim": "固定条件并说明改动",
+      "layout": "compare",
+      "evidence_kind": "demo",
+      "source_ids": [
+        "demo-01",
+        "demo-02",
+        "demo-03",
+        "demo-04",
+        "demo-05",
+        "demo-06",
+        "demo-07",
+        "demo-08"
+      ],
+      "status": "demo"
+    },
+    {
+      "slide_id": "experiment-settings",
+      "page": 5,
+      "claim": "真实环境与运行配置未提供",
+      "layout": "content",
+      "evidence_kind": "demo",
+      "source_ids": [
+        "demo-01",
+        "demo-02",
+        "demo-03",
+        "demo-04",
+        "demo-05",
+        "demo-06",
+        "demo-07",
+        "demo-08"
+      ],
+      "status": "demo"
+    },
+    {
+      "slide_id": "experiment-results",
+      "page": 6,
+      "claim": "演示AP_small增3.4/减0.7个百分点",
+      "layout": "results",
+      "evidence_kind": "demo",
+      "source_ids": [
+        "demo-01",
+        "demo-02",
+        "demo-03",
+        "demo-04",
+        "demo-05",
+        "demo-06",
+        "demo-07",
+        "demo-08"
+      ],
+      "status": "demo"
+    },
+    {
+      "slide_id": "experiment-curve",
+      "page": 7,
+      "claim": "演示末点与表一致，不能证明稳定性",
+      "layout": "figure",
+      "evidence_kind": "demo",
+      "source_ids": [
+        "demo-01",
+        "demo-02",
+        "demo-03",
+        "demo-04",
+        "demo-05",
+        "demo-06",
+        "demo-07",
+        "demo-08"
+      ],
+      "status": "demo"
+    },
+    {
+      "slide_id": "experiment-detection",
+      "page": 8,
+      "claim": "新增检出也有漏检误检",
+      "layout": "detection",
+      "evidence_kind": "demo",
+      "source_ids": [
+        "demo-01",
+        "demo-02",
+        "demo-03",
+        "demo-04",
+        "demo-05",
+        "demo-06",
+        "demo-07",
+        "demo-08"
+      ],
+      "status": "demo"
+    },
+    {
+      "slide_id": "experiment-badcase",
+      "page": 9,
+      "claim": "背景增强是待验证推断",
+      "layout": "figure",
+      "evidence_kind": "demo",
+      "source_ids": [
+        "demo-01",
+        "demo-02",
+        "demo-03",
+        "demo-04",
+        "demo-05",
+        "demo-06",
+        "demo-07",
+        "demo-08"
+      ],
+      "status": "demo"
+    },
+    {
+      "slide_id": "experiment-summary",
+      "page": 10,
+      "claim": "真实重复实验后才能形成结论",
+      "layout": "summary",
+      "evidence_kind": "demo",
+      "source_ids": [
+        "demo-01",
+        "demo-02",
+        "demo-03",
+        "demo-04",
+        "demo-05",
+        "demo-06",
+        "demo-07",
+        "demo-08"
+      ],
+      "status": "demo"
+    },
+    {
+      "slide_id": "experiment-plan",
+      "page": 11,
+      "claim": "下一步需要可验证目标",
+      "layout": "plan",
+      "evidence_kind": "demo",
+      "source_ids": [
+        "demo-01",
+        "demo-02",
+        "demo-03",
+        "demo-04",
+        "demo-05",
+        "demo-06",
+        "demo-07",
+        "demo-08"
+      ],
+      "status": "demo"
+    },
+    {
+      "slide_id": "experiment-end",
+      "page": 12,
+      "claim": "替换真实实验记录后持续更新",
+      "layout": "end",
+      "evidence_kind": "demo",
+      "source_ids": [
+        "demo-01",
+        "demo-02",
+        "demo-03",
+        "demo-04",
+        "demo-05",
+        "demo-06",
+        "demo-07",
+        "demo-08"
+      ],
+      "status": "demo"
+    }
+  ]
+}

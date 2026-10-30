@@ -1,0 +1,74 @@
+{
+  "source": "main.tex",
+  "output_dir": "build/final",
+  "engine": "C:\\texlive\\2026\\bin\\windows\\xelatex.EXE",
+  "compiled": true,
+  "visual_review_required": true,
+  "warnings": {
+    "overfull": [],
+    "underfull": [],
+    "missing_glyph": [],
+    "unresolved_reference": [],
+    "rerun": [],
+    "missing_asset": [],
+    "font_warning": []
+  },
+  "render_status": "completed",
+  "pdf": "experiment-demo.pdf",
+  "pdf_sha256": "bb34a710c7f83b8f4feea29574c92ed0297451013e0e9c27b0a60171bd486c21",
+  "pages": 12,
+  "page_sizes_pt": [
+    [
+      453.54,
+      255.12
+    ],
+    [
+      453.54,
+      255.12
+    ],
+    [
+      453.54,
+      255.12
+    ],
+    [
+      453.54,
+      255.12
+    ],
+    [
+      453.54,
+      255.12
+    ],
+    [
+      453.54,
+      255.12
+    ],
+    [
+      453.54,
+      255.12
+    ],
+    [
+      453.54,
+      255.12
+    ],
+    [
+      453.54,
+      255.12
+    ],
+    [
+      453.54,
+      255.12
+    ],
+    [
+      453.54,
+      255.12
+    ],
+    [
+      453.54,
+      255.12
+    ]
+  ],
+  "geometry_flags": [],
+  "low_resolution_images": [],
+  "rendered_pages": 12,
+  "automatic_check": "no flagged issues"
+}

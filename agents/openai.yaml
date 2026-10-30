@@ -1,0 +1,6 @@
+interface:
+  display_name: "LaTeX 学术组会汇报"
+  short_description: "以老师课件风格制作论文阅读与实验进展 Beamer 汇报，保存源码并编译检查"
+  default_prompt: "使用 $academic-group-meeting，根据提供的资料制作或更新本周 LaTeX 组会汇报，并检查 PDF。"
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,58 @@
+[
+  {
+    "source_id": "demo-01",
+    "path": "content/slides.tex",
+    "sha256": "daafaccee0123ac5c67941aace1f6676cbfdf34277925dda02fab7444454d667",
+    "location": "entire file",
+    "notes": "人为构造/合成的模板演示资料，非真实论文或实验。"
+  },
+  {
+    "source_id": "demo-02",
+    "path": "data/demo-curve.csv",
+    "sha256": "885f09a79731c7c515c8b4904355536e4c36f597d246ac5021ed3d5f6753e9ee",
+    "location": "entire file",
+    "notes": "人为构造/合成的模板演示资料，非真实论文或实验。"
+  },
+  {
+    "source_id": "demo-03",
+    "path": "data/demo-results.csv",
+    "sha256": "d8c7ff79a723db1083de4e869b91e26f0ff327f5600aa52c7e74de8de7865700",
+    "location": "entire file",
+    "notes": "人为构造/合成的模板演示资料，非真实论文或实验。"
+  },
+  {
+    "source_id": "demo-04",
+    "path": "figures/bad-case.png",
+    "sha256": "ef0f55a369a6813339c9e49524ccd9a8b223f1107f64cdbbeffe39d0a4cee855",
+    "location": "entire file",
+    "notes": "人为构造/合成的模板演示资料，非真实论文或实验。"
+  },
+  {
+    "source_id": "demo-05",
+    "path": "figures/baseline.png",
+    "sha256": "f70f9b7d3707d1f97dcdc93512dc64c2baae2bbe36e5a8c68fe864a69b71e4c1",
+    "location": "entire file",
+    "notes": "人为构造/合成的模板演示资料，非真实论文或实验。"
+  },
+  {
+    "source_id": "demo-06",
+    "path": "figures/curve.png",
+    "sha256": "05badfb42377978057bba8c35055f39ef78e3e0a0fa510161c4619ef39797d5b",
+    "location": "entire file",
+    "notes": "人为构造/合成的模板演示资料，非真实论文或实验。"
+  },
+  {
+    "source_id": "demo-07",
+    "path": "figures/gt.png",
+    "sha256": "936fee963e2ee42b43cbae94580d25fcda4755f259fd0a4522092167ad18b64c",
+    "location": "entire file",
+    "notes": "人为构造/合成的模板演示资料，非真实论文或实验。"
+  },
+  {
+    "source_id": "demo-08",
+    "path": "figures/improved.png",
+    "sha256": "c6d69c1551340264236c1796f0adb67dea7a74364b8b63cdc49eced67833f2b2",
+    "location": "entire file",
+    "notes": "人为构造/合成的模板演示资料，非真实论文或实验。"
+  }
+]

@@ -1,0 +1,116 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{beamerthemeGroupMeeting}[2026/10/12 Reference lecture style]
+\RequirePackage{graphicx}
+\RequirePackage{amsmath,amssymb}
+\RequirePackage{booktabs,tabularx,array}
+\RequirePackage{tikz}
+\usetikzlibrary{arrows.meta,positioning}
+
+\definecolor{GMBlue}{HTML}{0173B2}
+\definecolor{GMGreen}{HTML}{029E73}
+\definecolor{GMOrange}{HTML}{DE8F05}
+\definecolor{GMBlueLight}{HTML}{E6F0F8}
+\definecolor{GMGreenLight}{HTML}{E3F4EF}
+\definecolor{GMOrangeLight}{HTML}{FDF0E0}
+\definecolor{GMText}{HTML}{262626}
+\definecolor{GMMuted}{HTML}{8C8C8C}
+\setbeamercolor{normal text}{fg=GMText,bg=white}
+\setbeamercolor{structure}{fg=GMBlue}
+\setbeamercolor{frametitle}{fg=GMBlue,bg=white}
+\setbeamercolor{title}{fg=GMBlue}
+\setbeamercolor{subtitle}{fg=GMBlue}
+\setbeamercolor{alerted text}{fg=GMOrange}
+\setbeamercolor{block title}{fg=white,bg=GMBlue}
+\setbeamercolor{block body}{fg=GMText,bg=GMBlueLight}
+\setbeamercolor{block title example}{fg=white,bg=GMGreen}
+\setbeamercolor{block body example}{fg=GMText,bg=GMGreenLight}
+\setbeamercolor{block title alerted}{fg=white,bg=GMOrange}
+\setbeamercolor{block body alerted}{fg=GMText,bg=GMOrangeLight}
+\setbeamerfont{normal text}{size=\fontsize{10}{13}\selectfont}
+\setbeamerfont{frametitle}{size=\fontsize{12}{15}\selectfont,series=\mdseries}
+\setbeamerfont{title}{size=\fontsize{14.4}{18}\selectfont,series=\mdseries}
+\setbeamerfont{subtitle}{size=\fontsize{12}{15}\selectfont}
+\setbeamerfont{block title}{size=\fontsize{10}{12}\selectfont,series=\mdseries}
+\setbeamerfont{block body}{size=\fontsize{10}{13}\selectfont}
+\setbeamerfont{footnote}{size=\fontsize{8}{10}\selectfont}
+\setbeamersize{text margin left=1cm,text margin right=1cm}
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{headline}{}
+\setbeamertemplate{blocks}[default]
+\setbeamertemplate{itemize item}{\color{GMBlue}$\blacktriangleright$}
+\setbeamertemplate{itemize subitem}{\color{GMBlue}$\bullet$}
+\setbeamertemplate{frametitle}{%
+  \vskip0.10cm
+  \usebeamerfont{frametitle}\insertframetitle\par
+  \vskip0.09cm
+  {\color{GMBlue}\hrule height 0.55pt}\vskip0.08cm
+}
+\newcommand{\ReportStatus}{}
+\setbeamertemplate{footline}{%
+  \hbox{\begin{beamercolorbox}[wd=.80\paperwidth,ht=2.6ex,dp=1.2ex,leftskip=1cm]{normal text}
+    {\color{GMOrange}\fontsize{7}{8}\selectfont\ReportStatus}
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.20\paperwidth,ht=2.6ex,dp=1.2ex,rightskip=.18cm plus1fil]{normal text}
+    \hfill{\color{GMMuted}\fontsize{6}{7}\selectfont\insertframenumber/\inserttotalframenumber}
+  \end{beamercolorbox}}
+}
+\AtBeginDocument{\usebeamerfont{normal text}}
+\newenvironment{GMBlock}[1]{\begin{block}{#1}}{\end{block}}
+\newenvironment{GMConclusion}[1]{\begin{exampleblock}{#1}}{\end{exampleblock}}
+\newenvironment{GMCaution}[1]{\begin{alertblock}{#1}}{\end{alertblock}}
+\newcommand{\ReportLead}[1]{{\color{GMMuted}\fontsize{9}{12}\selectfont #1\par}\vspace{.12cm}}
+\newcommand{\ReportSource}[1]{\par\vspace{.08cm}{\color{GMMuted}\fontsize{8}{10}\selectfont #1\par}}
+\newcommand{\ReportTakeaway}[1]{\begin{GMConclusion}{本页结论}#1\end{GMConclusion}}
+\newcommand{\ReportPending}[1]{\textcolor{GMOrange}{待补充：#1}}
+\newcommand{\ReportPath}[1]{\texttt{\detokenize{#1}}}
+\newcommand{\ReportImage}[2][4.1cm]{%
+  \IfFileExists{#2}{\includegraphics[width=\linewidth,height=#1,keepaspectratio]{#2}}{%
+    \PackageWarning{beamerthemeGroupMeeting}{GM-MISSING-ASSET: #2}%
+    \fcolorbox{GMOrange}{GMOrangeLight}{\parbox[c][#1][c]{.88\linewidth}{\centering\ReportPending{图像}\par\texttt{\detokenize{#2}}}}}}
+
+\newcommand{\ReportTitlePage}{\begin{frame}[plain]
+  \vfill\centering
+  {\usebeamerfont{title}\usebeamercolor[fg]{title}\inserttitle\par}
+  \vspace{.15cm}{\usebeamerfont{subtitle}\usebeamercolor[fg]{subtitle}\insertsubtitle\par}
+  \vspace{.70cm}{\insertauthor\par}
+  \vspace{.22cm}{\fontsize{8}{11}\selectfont\insertinstitute\par}
+  \vspace{.38cm}\insertdate\par
+  \vspace{.45cm}{\color{GMMuted}\fontsize{9}{12}\selectfont\ReportStatus\par}\vfill
+\end{frame}}
+\newcommand{\ReportOutline}[2]{\begin{frame}[t]{汇报路线}
+  \ReportLead{围绕问题、证据与结论展开。}
+  \begin{columns}[T,onlytextwidth]\begin{column}{.48\textwidth}
+  \begin{GMBlock}{理解问题与方法}#1\end{GMBlock}\end{column}
+  \begin{column}{.48\textwidth}\begin{GMBlock}{检验结果与讨论}#2\end{GMBlock}\end{column}\end{columns}
+\end{frame}}
+\newcommand{\ReportSection}[2]{\section{#1}\begin{frame}{#1}
+  \vfill\centering{\color{GMBlue}\fontsize{18}{23}\selectfont #1\par}
+  \vspace{.35cm}{\color{GMMuted}#2\par}\vfill
+\end{frame}}
+\newcommand{\ReportContent}[3]{\begin{frame}[t]{#1}\ReportLead{#2}#3\end{frame}}
+\newcommand{\ReportCompare}[5]{\begin{frame}[t]{#1}\ReportLead{#2}
+  \begin{columns}[T,onlytextwidth]\begin{column}{.48\textwidth}#3\end{column}
+  \begin{column}{.48\textwidth}#4\end{column}\end{columns}\ReportTakeaway{#5}\end{frame}}
+\newcommand{\ReportNetwork}[5]{\begin{frame}[t]{#1}\ReportLead{#2}
+  \begin{center}#3\end{center}#4\ReportSource{#5}\end{frame}}
+\newcommand{\ReportEquation}[5]{\begin{frame}[t]{#1}\ReportLead{#2}
+  \begin{GMBlock}{核心关系}\[#3\]\end{GMBlock}#4\ReportTakeaway{#5}\end{frame}}
+\newcommand{\ReportFigure}[5]{\begin{frame}[t]{#1}\ReportLead{#2}
+  \begin{center}\ReportImage{#3}\end{center}
+  {\fontsize{9}{12}\selectfont #4\par}\ReportSource{#5}\end{frame}}
+\newcommand{\ReportResults}[5]{\begin{frame}[t]{#1}\ReportLead{#2}
+  \begin{center}{\fontsize{9}{12}\selectfont #3}\end{center}
+  \ReportTakeaway{#4}\ReportSource{#5}\end{frame}}
+\newcommand{\ReportAblation}[5]{\ReportResults{#1}{#2}{#3}{#4}{#5}}
+\newcommand{\ReportDetection}[6]{\begin{frame}[t]{#1}\ReportLead{#2}
+  \begin{columns}[T,onlytextwidth]
+  \begin{column}{.32\textwidth}\centering\strut\textcolor{GMBlue}{GT}\par\medskip\ReportImage[3.7cm]{#3}\end{column}
+  \begin{column}{.32\textwidth}\centering\strut\textcolor{GMBlue}{Baseline}\par\medskip\ReportImage[3.7cm]{#4}\end{column}
+  \begin{column}{.32\textwidth}\centering\strut\textcolor{GMBlue}{改进方法}\par\medskip\ReportImage[3.7cm]{#5}\end{column}
+  \end{columns}\ReportTakeaway{#6}\end{frame}}
+\newcommand{\ReportSummary}[3]{\begin{frame}[t]{#1}\ReportLead{从证据出发，保留适用边界。}#2\ReportTakeaway{#3}\end{frame}}
+\newcommand{\ReportPlan}[3]{\begin{frame}[t]{#1}\ReportLead{把观察转化为可检验的下一步。}#2
+  \begin{GMCaution}{需要讨论或决策}#3\end{GMCaution}\end{frame}}
+\newcommand{\ReportEnd}[3]{\begin{frame}{交流与讨论}\vfill\centering
+  {\color{GMGreen}\fontsize{14.4}{18}\selectfont #1\par}\vspace{.22cm}#2\par
+  \vspace{.38cm}{\color{GMMuted}#3\par}\vfill\end{frame}}

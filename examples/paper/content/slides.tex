@@ -1,0 +1,81 @@
+\ReportTitlePage
+\ReportOutline{
+  \begin{itemize}\item 研究问题与核心假设\item 整体结构与关键公式\end{itemize}
+}{
+  \begin{itemize}\item 实验结果与消融证据\item 局限、批判与研究启发\end{itemize}
+}
+\ReportContent{先明确论文身份与阅读边界}{本例展示汇报逻辑，不能当作文献或实验依据。}{
+  \begin{GMBlock}{论文基本信息（虚构示例）}
+    标题：局部细节与上下文融合的小目标检测\par
+    作者、会议/期刊、年份：无真实对应，不提供虚构引用
+  \end{GMBlock}
+  \begin{GMCaution}{阅读重点}
+    小目标细节在下采样中可能损失；如何设计验证，而不是直接声称模块有效？
+  \end{GMCaution}
+}
+\ReportSection{从问题到方法}{细节增强与上下文聚合分别解决什么问题？}
+\ReportCompare{研究问题：保留细节，也控制背景干扰}{以下为示例假设，不是某篇真实论文的作者结论。}{
+  \begin{GMBlock}{可能的困难}
+    \begin{itemize}\item 小目标只占少量像素\item 下采样后响应减弱\item 密集背景产生相似纹理\end{itemize}
+  \end{GMBlock}
+}{
+  \begin{GMBlock}{待验证的设计}
+    \begin{itemize}\item 保留高分辨率细节分支\item 提供局部上下文\item 分别开关模块做消融\end{itemize}
+  \end{GMBlock}
+}{方法设计必须对应可观察的失败现象和可比较的实验。}
+\ReportNetwork{整体架构：先讲完整数据流}{示意网络，不对应真实论文；箭头表示特征流向。}{
+  \begin{tikzpicture}[node distance=8mm,box/.style={draw=GMBlue,fill=GMBlueLight,minimum width=22mm,minimum height=10mm,align=center,font=\small},flow/.style={-Latex,thick,GMBlue}]
+    \node[box] (in) {输入图像};
+    \node[box,right=of in] (enc) {特征提取};
+    \node[box,right=of enc] (fuse) {特征融合};
+    \node[box,right=of fuse] (head) {检测头};
+    \node[box,below=of enc] (detail) {细节分支};
+    \draw[flow] (in)--(enc);\draw[flow] (enc)--(fuse);\draw[flow] (fuse)--(head);
+    \draw[flow] (enc)--(detail);\draw[flow] (detail)-|(fuse);
+  \end{tikzpicture}
+}{
+  \begin{GMBlock}{输入与输出}
+    图像 → 多尺度特征 → 融合 → 类别与位置。真实汇报应补充各级尺寸、训练分支和推理分支。
+  \end{GMBlock}
+}{来源：模板自绘的示意结构，非论文原图。}
+\ReportEquation{关键模块：公式必须解释其作用}{讲解用门控公式；不是已验证的新方法。}{
+  \widehat{F}_{h,w}=F_{h,w}\bigl(1+\sigma(g(F)_{h,w})\bigr)
+}{
+  \begin{itemize}
+    \item $F_{h,w}$：位置 $(h,w)$ 的输入特征。
+    \item $g$：产生门控响应；$\sigma$：将响应限制到 $(0,1)$。
+    \item 残差形式保留原特征；是否有益仍需固定条件消融。
+  \end{itemize}
+}{公式描述特征如何改变；实验才提供有效性的证据。}
+\ReportContent{实验设置：先检查结果能否比较}{以下为演示设置，数据集及训练信息没有真实对应。}{
+  \begin{GMBlock}{结果解释需要的条件}
+    \begin{itemize}
+      \item 数据：合成演示验证集；本例不定义真实数据划分。
+      \item 指标：示意 AP50 与 AP\_small，单位为百分数。
+      \item 训练与评估：没有真实 run、参数、种子或脚本记录。
+    \end{itemize}
+  \end{GMBlock}
+  \begin{GMCaution}{不可外推}
+    真实报告须确认小目标定义、输入大小和评估口径；演示数字不能用于性能排名。
+  \end{GMCaution}
+}
+\ReportResults{结果展示：同时报告改进与下降}{演示数据；只用于检验三线表与结论组件。}{
+  \begin{tabular}{lrr}\toprule
+    配置 & AP50 (\%) & AP\_small (\%)\\\midrule
+    Baseline & 61.2 & 32.4\\
+    Detail & 64.1 & 35.8\\
+    Context & 60.4 & 31.7\\\bottomrule
+  \end{tabular}
+}{示例中 Detail 较 Baseline 高 2.9 个 AP50 百分点；Context 低 0.8 个百分点。}{来源：本模板人为构造的数字，非作者结果或本地复现。}
+\ReportAblation{消融解读：开关关系与实验边界}{假设其他条件保持一致；本例没有真实控制变量实验。}{
+  \input{data/ablation-table.tex}
+}{这个表只能演示如何比较模块；不能证明细节分支在真实任务中有效。}{来源：data/demo-ablation.csv；演示数字。尚缺双模块组合、多种子及成本分析。}
+\ReportSummary{局限与对当前研究的启发}{
+  \begin{GMBlock}{我们的推断（待验证）}
+    细节分支可能改善微小目标响应，也可能放大背景纹理；应查看召回、误检与计算成本。
+  \end{GMBlock}
+  \begin{GMCaution}{批判性分析}
+    缺少真实论文、跨数据集证据和重复实验；不能对鲁棒性或因果关系下结论。
+  \end{GMCaution}
+}{下一步用真实遥感数据建立固定预算的对照，并从 Bad Case 验证假设。}
+\ReportEnd{遥感小目标检测 · 论文阅读讨论}{示例日期：2026 年 10 月 12 日}{请用真实论文的结构图、公式和结果替换演示内容。}

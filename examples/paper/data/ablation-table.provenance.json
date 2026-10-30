@@ -1,0 +1,16 @@
+{
+  "source": "C:\\latex skill\\academic-group-meeting\\examples\\paper\\data\\demo-ablation.csv",
+  "source_sha256": "24d64cf499b9f0050436ec35faa31dbf207d3b62e00b7115eeed6056e2b1255c",
+  "columns": [
+    "配置",
+    "细节分支",
+    "上下文分支",
+    "AP50 (%)",
+    "AP_small (%)"
+  ],
+  "source_rows": 3,
+  "rendered_rows": 3,
+  "limit": null,
+  "demo": true,
+  "transform": "TeX escape only; empty cells labelled missing"
+}

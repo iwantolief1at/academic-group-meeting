@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "checks": [
+    "Init refuses existing directory; draft contains no demo results",
+    "Fresh paper skeleton compiles independently (5 pages)",
+    "CSV preserves precision, escapes TeX, marks empty cells and refuses overwrite/unknown columns",
+    "PDF crop preserves vector page dimensions and rejects invalid page/overwrite",
+    "Build flags missing images/overflow, records compile failure and refuses existing output",
+    "Fresh experiment skeleton compiles independently (6 pages)"
+  ]
+}

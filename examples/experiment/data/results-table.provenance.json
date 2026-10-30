@@ -1,0 +1,14 @@
+{
+  "source": "C:\\latex skill\\academic-group-meeting\\examples\\experiment\\data\\demo-results.csv",
+  "source_sha256": "d8c7ff79a723db1083de4e869b91e26f0ff327f5600aa52c7e74de8de7865700",
+  "columns": [
+    "method",
+    "AP50 (%)",
+    "AP_small (%)"
+  ],
+  "source_rows": 3,
+  "rendered_rows": 3,
+  "limit": null,
+  "demo": true,
+  "transform": "TeX escape only; empty cells labelled missing"
+}
